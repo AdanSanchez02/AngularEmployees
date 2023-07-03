@@ -1,0 +1,60 @@
+<div class="container-lg">
+    <h3> EDITAR REGISTRO </h3>
+    <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">ID</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="id" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="work.id" disabled="true">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese ID unico del registro.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">ID EMPLEADO</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="employees.id" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="work.employees.id">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese el ID del empleado.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">FECHA </label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="worked_date" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="work.worked_date">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            YYYY-MM-DD
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">HRS LABORADAS</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="worked_hours" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="work.worked_hours">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Horas laboradas
+          </span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="Listar()">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="Editar()">Editar</button>
+      </div>
+      
+</div>

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">PUESTOS</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" (click)="Guardar()">ALTA PUESTO</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-lg">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PUESTO</th>
+                <th>SALARIO</th>
+                <th>EDITAR</th>
+                <th>ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of job">
+                <td>{{e.id}}</td>
+                <td>{{e.name}}</td>
+                <td>{{e.salary}}</td>
+                <td><button type="button" class="btn btn-warning" (click)="Editar(e)"><span class="material-icons">
+                            edit_document
+                        </span></button></td>
+                <td><button type="button" class="btn btn-danger" (click)="Eliminar(e)"><span class="material-icons">
+                            delete
+                        </span></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

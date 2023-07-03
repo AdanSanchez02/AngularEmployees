@@ -1,0 +1,99 @@
+<div class="container">
+
+    <div class="starter-template">
+
+        <div class="row">
+
+            <div class="col-md-12 mt-5">
+
+                <h1>{{ titulo }} </h1>
+
+                <form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+                    <div class="form-group">
+                        <label>NOMBRES</label>
+                        <input type="text" formControlName="nombre" class="form-control" required name="nombre"
+                            [ngClass]="{'is-invalid': submitted && f.nombre.errors}" [(ngModel)]="consulta.nombre">
+                        <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
+                           Ingresa sus Nombres
+                        </span>
+                        <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">
+                            (Debe tener como mínimo 5 caracteres)
+                        </span>
+                        <span *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+                            ERROR CON EL NOMBRE
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>APELLIDOS</label>
+                        <input type="text" formControlName="aps" class="form-control" required name="aps"
+                            [ngClass]="{'is-invalid': submitted && f.aps.errors}" [(ngModel)]="consulta.aps">
+                        <span *ngIf="this.formularioContacto.get('aps')?.errors?.['required']">
+                            Ingrese sus Apellidos
+                        </span>
+                        <span *ngIf="this.formularioContacto.get('aps')?.errors?.['minlength']">
+                            (Debe tener como mínimo 5 caracteres)
+                        </span>
+                        <span *ngIf="submitted && f.aps.errors" class="invalid-feedback">
+                            ERROR CON EL APELLIDO
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>CORREO</label>
+                        <input type="text" formControlName="correo" class="form-control" required name="correo"
+                            [ngClass]="{'is-invalid': submitted && f.correo.errors}" [(ngModel)]="consulta.correo">
+                        <span *ngIf="this.formularioContacto.get('correo')?.errors?.['required']">
+                            Ingresa email
+                        </span>
+                        <span *ngIf="this.formularioContacto.get('correo')?.errors?.['email']">
+                            (El formato de email no es correcto)
+                        </span>
+                        <span *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                            ERROR CON EL EMAIL
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>FECHA</label>
+                        <input type="text" formControlName="fecha" class="form-control" required name="fecha"
+                            [ngClass]="{'is-invalid': submitted && f.fecha.errors}" [(ngModel)]="consulta.fecha">
+                        <span *ngIf="this.formularioContacto.get('fecha')?.errors?.['required']">
+                            Ingresa la feha 
+                        </span>
+                        <span *ngIf="this.formularioContacto.get('fecha')?.errors?.['minlength']">
+                            (El formato de la fecha es yyyy-mm-dd)
+                        </span>
+                        <span *ngIf="submitted && f.fecha.errors" class="invalid-feedback">
+                            ERROR CON EL FORMATO DE FECHA
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>COMENTARIO</label>
+                        <input type="text" formControlName="comentario" class="form-control" required name="comentario"
+                            [ngClass]="{'is-invalid': submitted && f.comentario.errors}" [(ngModel)]="consulta.comentario">
+                        <span *ngIf="this.formularioContacto.get('comentario')?.errors?.['required']">
+                            Ingresa comentario
+                        </span>
+                        <span *ngIf="this.formularioContacto.get('comentario')?.errors?.['maxlength']">
+                            (Debe tener como máximo 250 caracteres)
+                        </span>
+                        <span *ngIf="submitted && f.comentario.errors" class="invalid-feedback">
+                            ERROR CON EL FORMATO DE FECHA
+                        </span>
+                    </div>
+                </form>
+                <br>
+                <div >
+                    <button type="submit" class="btn btn-primary" (click)="submit()">Confirmar</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

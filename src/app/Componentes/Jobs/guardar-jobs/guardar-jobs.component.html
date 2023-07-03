@@ -1,0 +1,47 @@
+<div class="container-lg">
+    <h3> ALTA DE PUESTO</h3>
+    <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">ID</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="id" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="job.id">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese ID unico del puesto.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">PUESTO</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="name" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="job.name">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese el nombre del puesto.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">SALARIO</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="salary" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="job.salary">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese el Salario asignado al puesto
+          </span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="Listar()">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="Guardar()">Guardar</button>
+      </div>
+      
+</div>

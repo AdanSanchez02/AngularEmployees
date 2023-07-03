@@ -1,0 +1,89 @@
+<div class="container-lg">
+    <h3> ALTA DE EMPLEADO</h3>
+    <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">ID</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="id" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="empleado.id">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese ID unico del empleado.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">NOMBRE</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="name" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="empleado.name">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese el nombre del empleado.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">APELLIDO</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="last_name" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="empleado.last_name">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese el apellido del empleado.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">FECHA DE NACIMIENTO</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="birthdate" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="empleado.birthdate">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese la fecha de nacimiento yyyy-mm-dd
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">GENERO</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" name="genders.id" class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="empleado.genders">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            1 - Hombre, 2 - Mujer
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-1">
+          <label for="text" class="col-form-label">PUESTO</label>
+        </div>
+        <div class="col-auto"> 
+          <select class="form-select" aria-label="Default select example"  [(ngModel)]="empleado.jobs">
+            <option selected>Seleccione un puesto</option>
+            <option *ngFor="let e of job" [ngValue]="e.id">{{e.name}}</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Ingrese el puesto del empleado
+          </span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="Listar()">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="Guardar()">Guardar</button>
+      </div>
+      
+</div>

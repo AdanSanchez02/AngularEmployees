@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light bg-dark">
+  <div class="container-xxl">
+    <a class="navbar-brand text-white" href="#">
+      <img src="/assets/iconos/asd.png"  width="50" height="50" >
+      Trabajadores
+    </a>
+    <div class="dropdown container-lg">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+        MENU TRABAJADOR
+      </button>
+      <ul class="dropdown-menu bg-secondary text_white" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item"  style="cursor: pointer;" (click)="listarJ()">PUESTOS</a></li>
+        <li><a class="dropdown-item"  style="cursor: pointer;" (click)="listarE()">EMPLEADO</a></li>
+        <li><a class="dropdown-item"  style="cursor: pointer;" (click)="listarW()">REGISTRO</a></li>
+      </ul>
+
+  <button type="button" class="btn btn-outline-secondary" style="float: right;" (click)="contacto()">
+    Contacto
+  </button>
+
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
